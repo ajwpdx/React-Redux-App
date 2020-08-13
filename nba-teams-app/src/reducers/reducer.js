@@ -1,25 +1,25 @@
-import { FETCH_TEAM_START } from '../actions/teamActions'
-import { FETCH_TEAM_SUCCESS } from '../actions/teamActions'
+import { FETCH_JOKE_START } from '../actions/actions'
+import { FETCH_JOKE_SUCCESS } from '../actions/actions'
 
 const initialState = {
-    teams: [],
+    jokes: [],
     isLoading: false,
     error: ''
 }
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCH_TEAM_START:
+        case FETCH_JOKE_START:
             return {
                 ...state,
                 isLoading: true,
                 error: ''
             }
-        case FETCH_TEAM_SUCCESS:
+        case FETCH_JOKE_SUCCESS:
             return {
                 ...state, 
                 isLoading: false,
-                teams: action.payload
+                jokes: action.payload
             }    
         default:
             return state

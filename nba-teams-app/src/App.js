@@ -1,14 +1,16 @@
 import React from 'react';
 
-import Teams from './components/Teams'
+import Jokes from './components/Jokes'
 
 function App() {
   return (
     <div className="App">
+      <div className='container'>
       <header>
-        <h1>NBA Teams</h1>
+        <h1>Jokester 😂</h1>
       </header>
-      <Teams />
+      <Jokes />
+    </div>
     </div>
   );
 }
